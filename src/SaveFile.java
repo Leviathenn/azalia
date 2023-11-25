@@ -6,6 +6,11 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 
+/**
+ * @author Leviathenn
+ */
+
+
 import org.ini4j.*;
 
 public class SaveFile{

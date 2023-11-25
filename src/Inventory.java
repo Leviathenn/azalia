@@ -4,7 +4,8 @@
 
 
 public class Inventory {
-    public void AddItem(String ID){
+    public Object[] INVENTORY = {};
+    public void AddItem(Item ID){  
         
     }
 }
