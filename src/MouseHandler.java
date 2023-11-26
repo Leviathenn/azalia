@@ -29,6 +29,9 @@ public class MouseHandler implements MouseListener, MouseMotionListener {
 
 	@Override
 	public void mouseReleased(MouseEvent e) {
+        click = false;
+		mouseX = e.getX();
+		mouseY = e.getY();
 	}
 
 	@Override

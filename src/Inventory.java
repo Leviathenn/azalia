@@ -5,11 +5,11 @@ import java.util.ArrayList;
 
 public class Inventory {
     public ArrayList<Item> items = new ArrayList<Item>();
-    public void AddItem(String ID){  
-        Item item = new Item(ID);
+    public void AddItem(Item item){
         items.add(item);
-            
+        
     }  
+    
     public Category GetCategory(char sChar){
         Category d = null;
         switch (sChar) {

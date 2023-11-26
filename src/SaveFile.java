@@ -20,6 +20,12 @@ public class SaveFile{
             Ini fIni = new Ini(fReader);
             int health = Integer.parseInt(fIni.get("Save", "health"));
             Utils.print(health);
+            Inventory i = new Inventory();
+            Armor armor = new Armor("a0");
+           // i.AddItem(armor);
+            //Utils.print(i.items);
+            
+
         } catch (NumberFormatException | IOException e) {
             // TODO Auto-generated catch block
             //e.printStackTrace();
