@@ -11,20 +11,19 @@ public class Armor extends Item {
     String Name; 
     int Durabilty;
     int Damage;
-    boolean isBroken;
-
-    public Armor(String itemID){
+    Inventory i;
+    public Armor(String itemID, Inventory inv){
         super(itemID);
         int index = iID;
         Name = ArmorNames[index];
         Durabilty = ArmorDurrabilties[index];
         Damage = ArmorDamages[index];
-        isBroken = false;
+        i = inv;
 
     } 
 
 
     void Break(){
-        isBroken = true;
+        i.RemoveItem(this); 
     }
 }

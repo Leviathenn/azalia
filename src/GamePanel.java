@@ -11,6 +11,7 @@ public class GamePanel extends JPanel implements Runnable {
     public final int screenHeight = 500;
 
     Thread gameThread;
+    public Inventory i = new Inventory();
     public GameStates state = GameStates.MENU;
     public MouseHandler mh = new MouseHandler(this);
     public KeyHandler kh = new KeyHandler(this);

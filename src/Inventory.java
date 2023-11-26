@@ -7,8 +7,11 @@ public class Inventory {
     public ArrayList<Item> items = new ArrayList<Item>();
     public void AddItem(Item item){
         items.add(item);
-        
     }  
+    public void RemoveItem(Item item)
+    {
+        items.remove(item);
+    }
     
     public Category GetCategory(char sChar){
         Category d = null;

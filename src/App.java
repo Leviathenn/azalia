@@ -13,16 +13,16 @@ public class App {
 		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		window.setResizable(false);
 		window.setTitle("Azalia");
-		
-		window.add(new GamePanel());
+		GamePanel gp = new GamePanel();
+		window.add(gp);
 		
 		window.pack();
         
 	
 		window.setLocationRelativeTo(null);
 		window.setVisible(true);
-        SaveFile.ParseSave();
-
+        SaveFile save = new SaveFile(gp);
+        save.ParseSave();
     }
 	
 	
