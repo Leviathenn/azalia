@@ -11,12 +11,15 @@ public class GamePanel extends JPanel implements Runnable {
     public final int screenHeight = 500;
 
     Thread gameThread;
-    GameStates state = GameStates.MENU;
+    public GameStates state = GameStates.MENU;
+    public MouseHandler mh = new MouseHandler(this);
 
     public GamePanel() {
 		this.setPreferredSize(new Dimension(screenWidth, screenHeight));
 		this.setDoubleBuffered(true);
 		this.setFocusable(true);
+        this.addMouseListener(mh);
+        this.addMouseMotionListener(mh);
 
 		startGame();
     }

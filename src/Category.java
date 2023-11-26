@@ -2,5 +2,6 @@
  * @author Leviathenn
  */
 public enum Category {
-    ARMOR, COLLECTABLES, FOOD, MAGIC 
+    ARMOR, COLLECTABLES, FOOD, MAGIC, UNKNOWN
 }
+

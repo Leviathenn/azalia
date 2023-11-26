@@ -17,10 +17,12 @@ public class App {
 		window.add(new GamePanel());
 		
 		window.pack();
+        
 	
 		window.setLocationRelativeTo(null);
 		window.setVisible(true);
         SaveFile.ParseSave();
+
     }
 	
 	

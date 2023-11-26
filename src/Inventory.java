@@ -1,11 +1,34 @@
 /**
  * @author Leviathenn
  */
-
+import java.util.ArrayList;
 
 public class Inventory {
-    public Item[] INVENTORY = {};
+    public ArrayList<Item> items = new ArrayList<Item>();
     public void AddItem(String ID){  
+        Item item = new Item(ID);
+        items.add(item);
             
     }  
+    public Category GetCategory(char sChar){
+        Category d = null;
+        switch (sChar) {
+            case 'a':
+                d = Category.ARMOR;
+                break;
+            case 'c':
+                d = Category.COLLECTABLES;
+                break; 
+            case 'f':
+                d = Category.FOOD;
+                break;
+            case 'm':
+                d = Category.MAGIC;
+                break;
+            default:  
+                d = Category.UNKNOWN;                   
+                break;
+        }
+        return d;  
+    }
 }
