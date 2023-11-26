@@ -1,4 +1,6 @@
-package main;
+/**
+ * @author PWITZEL
+*/
 
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
@@ -31,12 +33,12 @@ public class KeyHandler implements KeyListener {
 		
 	}
 	
-	public void handleKeys(int keyCode, boolean condition) {
+	public void handleKey(int keyCode, boolean condition) {
 		
 		if(condition) {
-            keyTyped = k;
+            keyTyped = String.valueOf(keyCode).toLowerCase();
         } else if(!condition) {
-
+            keyTyped = "none";
         }
 	}
 
