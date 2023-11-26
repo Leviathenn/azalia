@@ -34,9 +34,9 @@ public class KeyHandler implements KeyListener {
 	}
 	
 	public void handleKey(int keyCode, boolean condition) {
-		
+		System.out.println(String.valueOf(KeyEvent.getKeyText(keyCode)).toLowerCase());
 		if(condition) {
-            keyTyped = String.valueOf(keyCode).toLowerCase();
+            keyTyped = String.valueOf(KeyEvent.getKeyText(keyCode)).toLowerCase();
         } else if(!condition) {
             keyTyped = "none";
         }

@@ -66,11 +66,13 @@ public class TextBox {
 
         if(typing) {
             if(!keyPressed) {
-                if(!(kh.keyTyped.split("_")[1].equals("space"))) {
+                if(!(kh.keyTyped.equals("space"))) {
                     text = text + (kh.keyTyped.split("_")[1]);
-                } else if(kh.keyTyped.split("_")[1].equals("space")) {
+                } else if(kh.keyTyped.equals("space")) {
                     text = text + " ";
                 }
+
+                keyPressed = true;
                 
             } else if(keyPressed) {
                 if(kh.keyTyped.equals("none")) {

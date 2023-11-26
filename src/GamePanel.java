@@ -15,6 +15,8 @@ public class GamePanel extends JPanel implements Runnable {
     public GameStates state = GameStates.MENU;
     public MouseHandler mh = new MouseHandler(this);
     public KeyHandler kh = new KeyHandler(this);
+    public TextBox myTextBox = new TextBox(this, 100, 100, 100, "Enter Name...",2,Color.BLUE, Color.WHITE, Color.GRAY);
+    
 
     public GamePanel() {
 		this.setPreferredSize(new Dimension(screenWidth, screenHeight));
@@ -47,19 +49,7 @@ public class GamePanel extends JPanel implements Runnable {
     }
 
     public void update() {
-        switch(state) {
-            case MENU:
-
-                break;
-			case GAMEPLAY:
-				break;
-			case INVENTORY:
-				break;
-			case PAUSE:
-				break;
-			case SHOP:
-				break;
-        }
+        myTextBox.update();
     }
 
     public void paintComponent(Graphics g) {
@@ -67,19 +57,7 @@ public class GamePanel extends JPanel implements Runnable {
         Graphics2D g2 = (Graphics2D) g;
         g2.setColor(new Color(150,150,150));
         g2.fillRect(0, 0, screenWidth, screenHeight);
-        switch(state) {
-            case MENU:
-
-                break;
-			case GAMEPLAY:
-				break;
-			case INVENTORY:
-				break;
-			case PAUSE:
-				break;
-			case SHOP:
-				break;
-        }
+        myTextBox.draw(g2);
         g2.dispose();
     }
 }
