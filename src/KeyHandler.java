@@ -1,5 +1,5 @@
 /**
- * @author PWITZEL
+ * @author PrestonWitzel
 */
 
 import java.awt.event.KeyEvent;
@@ -8,6 +8,11 @@ import java.awt.event.KeyListener;
 public class KeyHandler implements KeyListener {
 	GamePanel gp;
 	public String keyTyped;
+	public boolean wPress = false;
+	public boolean aPress = false;
+	public boolean sPress = false;
+	public boolean dPress = false;
+	public boolean typing = false;
 
 	public KeyHandler(GamePanel gp) {
 		this.gp = gp;
@@ -40,6 +45,19 @@ public class KeyHandler implements KeyListener {
         } else if(!condition) {
             keyTyped = "none";
         }
+
+		if(keyCode == KeyEvent.VK_W) {
+			wPress = condition;
+		}
+		if(keyCode == KeyEvent.VK_A) {
+			aPress = condition;
+		}
+		if(keyCode == KeyEvent.VK_S) {
+			sPress = condition;
+		}
+		if(keyCode == KeyEvent.VK_D) {
+			dPress = condition;
+		}
 	}
 
 }

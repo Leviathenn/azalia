@@ -1,12 +1,14 @@
 /**
- * @author Leviathenn, pwitzel
+ * @author Leviathenn, PrestonWitzel
  * 25 November 2023
  */
 import javax.swing.JFrame;
 
 
 public class App {
+	public static void afterLoad(){
 
+	}
 	public static void main(String[] args) {
 		
 		JFrame window = new JFrame();

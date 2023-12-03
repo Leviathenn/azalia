@@ -1,5 +1,5 @@
 /**
- * @author PWITZEL, Leviathenn
+ * @author PrestonWitzel, Leviathenn
  */
 
 import java.awt.Color;
@@ -13,7 +13,6 @@ public class TextBox {
 	public int width;
 	public int height;
 	public int borderWeight;
-	public boolean hidden = false;
     public boolean typing = false;
     public String text = "";
     public String prompt = ""; 
@@ -59,8 +58,10 @@ public class TextBox {
 		if(mh.clicked()) {
             if(mh.mouseX() > x && mh.mouseX() < x + width && mh.mouseY() > y && mh.mouseY() < y + height) {
                 typing = true;
+                kh.typing = true;
             } else  if(!(mh.mouseX() > x && mh.mouseX() < x + width && mh.mouseY() > y && mh.mouseY() < y + height)) {
                 typing = false;
+                kh.typing = false;
             }
         }
 

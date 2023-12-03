@@ -1,5 +1,5 @@
 /**
- * @author PWITZEL
+ * @author PrestonWitzel
 */
 
 import java.awt.event.MouseEvent;

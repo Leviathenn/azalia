@@ -1,3 +1,7 @@
+/**
+ * @author PrestonWitzel
+ */
+
 import javax.swing.JPanel;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
@@ -5,10 +9,17 @@ import java.awt.Dimension;
 import java.awt.Color;
 
 public class GamePanel extends JPanel implements Runnable {
-    final int FPS = 60;
+    final int originalTileSize = 16;
+	final int scale = 3;
+	final int FPS = 60;
+	
+	public final int tileSize = originalTileSize * scale;
+	final int maxScreenCol = 16;
+	final int maxScreenRow = 12;
+	public final int screenWidth = tileSize * maxScreenCol;
+	public int screenHeight = tileSize * maxScreenRow;
 
-    public final int screenWidth = 1000;
-    public final int screenHeight = 500;
+    public String map = "";
 
     Thread gameThread;
     public Inventory i = new Inventory();
@@ -16,7 +27,8 @@ public class GamePanel extends JPanel implements Runnable {
     public MouseHandler mh = new MouseHandler(this);
     public KeyHandler kh = new KeyHandler(this);
     public TextBox myTextBox = new TextBox(this, 100, 100, 100, "Enter Name...",2,Color.BLUE, Color.WHITE, Color.GRAY);
-    
+    Player player = new Player(this, kh);
+    public TileManager tm = new TileManager(this);
 
     public GamePanel() {
 		this.setPreferredSize(new Dimension(screenWidth, screenHeight));

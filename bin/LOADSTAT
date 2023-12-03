@@ -1,0 +1,3 @@
+[LoaderInfo]
+FileC=26
+Files=App.class,Armor.class,Button.class,Category.class,CollisionChecker.class,Entity.class,GamePanel.class,GameStates.class,Inventory.class,Item.class,KeyHandler.class,LOADSTAT,Levels.class,Loader$1.class,Loader.class,MouseHandler.class,Pak.class,Player.class,Res,SaveFile.class,ShortCategories.class,TextBox.class,Tile.class,TileManager.class,Utils.class,game.asf,test.pak

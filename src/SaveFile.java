@@ -6,11 +6,6 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 
-/**
- * @author Leviathenn
- */
-
-
 import org.ini4j.*;
 
 public class SaveFile{
@@ -25,8 +20,8 @@ public class SaveFile{
     
     void ParseSave(){
         Inventory i = gp.i;
-        File file = new File("bin/game.zsf");
-        try (FileReader fReader = new FileReader(file)) {
+        File file = new File("bin/game.asf"); 
+        try (FileReader fReader = new FileReader(file)) { 
             Ini fIni = new Ini(fReader);
             int health = Integer.parseInt(fIni.get("Save", "health"));
             Utils.print(health);
