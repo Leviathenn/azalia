@@ -5,6 +5,7 @@
 import javax.swing.JPanel;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
+import java.util.ArrayList;
 import java.awt.Dimension;
 import java.awt.Color;
 
@@ -29,6 +30,7 @@ public class GamePanel extends JPanel implements Runnable {
     public TextBox myTextBox = new TextBox(this, 100, 100, 100, "Enter Name...",2,Color.BLUE, Color.WHITE, Color.GRAY);
     Player player = new Player(this, kh);
     public TileManager tm = new TileManager(this);
+    public CollisionChecker cc = new CollisionChecker(this);
 
     public GamePanel() {
 		this.setPreferredSize(new Dimension(screenWidth, screenHeight));
@@ -62,6 +64,7 @@ public class GamePanel extends JPanel implements Runnable {
 
     public void update() {
         myTextBox.update();
+        player.update();
     }
 
     public void paintComponent(Graphics g) {
@@ -69,7 +72,17 @@ public class GamePanel extends JPanel implements Runnable {
         Graphics2D g2 = (Graphics2D) g;
         g2.setColor(new Color(150,150,150));
         g2.fillRect(0, 0, screenWidth, screenHeight);
+        tm.draw(g2);
         myTextBox.draw(g2);
+
+        ArrayList<Entity> entities = new ArrayList<Entity>();
+		
+		entities.add(player);
+
+        entities.forEach(e -> {
+			e.draw(g2);
+		});
+
         g2.dispose();
     }
 }

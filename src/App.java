@@ -6,11 +6,12 @@ import javax.swing.JFrame;
 
 
 public class App {
-	public static void afterLoad(){
-
+	public static void afterLoad() {
+		
 	}
 	public static void main(String[] args) {
-		
+		//Loader loader = new Loader();
+		//loader.Load();
 		JFrame window = new JFrame();
 		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		window.setResizable(false);
@@ -25,6 +26,10 @@ public class App {
 		window.setVisible(true);
         SaveFile save = new SaveFile(gp);
         save.ParseSave();
+		
+		
+		
+		
     }
 	
 	

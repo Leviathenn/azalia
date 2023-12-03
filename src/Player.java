@@ -1,5 +1,5 @@
 /**
- * @author PrestonWitzel
+ * @author PrestonWitzel, Leviathan
  */
 
 import java.awt.BasicStroke;
@@ -13,6 +13,7 @@ import javax.imageio.ImageIO;
 public class Player extends Entity {
 	GamePanel gp;
 	KeyHandler kh;
+
 	public int invCurrent = 0;
 	public long useTimer = 0;
 
@@ -25,9 +26,11 @@ public class Player extends Entity {
 	}
 
 	public void setDefaultValues() {
-		this.worldX = gp.tm.spawnPointX;
-		this.worldY = gp.tm.spawnPointY;
-		this.speed = 2;
+		//this.worldX = gp.tm.spawnPointX;
+		//this.worldY = gp.tm.spawnPointY;
+		this.worldX = 0;
+        this.worldY = 0;
+        this.speed = 2;
 
 		solidArea = new Rectangle();
 		solidArea.x = 8;
